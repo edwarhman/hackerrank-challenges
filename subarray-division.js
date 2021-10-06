@@ -1,13 +1,12 @@
 function birthday(s, d, m) {
-  let nop = 0;
-  for (let i = 0; i < s.length - (m-1); i++) {
-    const sum = s.slice(i, i + m).reduce((acc,el) => acc + el, 0);
-    sum
+  let numberOfParts = 0;
+  for (let index = 0; index < s.length - (m-1); index++) {
+    const sum = s.slice(index, index + m).reduce((acc,el) => acc + el, 0);
     if (sum === d) {
-      nop++;
+      numberOfParts++;
     }
   }
-  return nop;
+  return numberOfParts;
 }
 
 // I had problems because I didn't read the problem's statement correctly
